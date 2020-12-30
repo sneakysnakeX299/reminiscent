@@ -3,6 +3,7 @@
 
 ### Installation
 Just download the jar and run with: "java -jar reminiscent.jar". If that doesn't work: "java --module-path=/path/to/java/libfiles --add-modules=ALL-MODULE-PATH -jar reminiscent.jar".
+
 Note: OpenJDK 14 is recommended.
 
 ### Autostarting
