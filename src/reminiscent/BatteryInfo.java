@@ -46,8 +46,6 @@ public class BatteryInfo implements Runnable {
                                 //commands will run whenever a new item is added to the list
                                 //and im lazy to fix this at the moment
                                 //will fix when this becomes a huge issue or something
-                                System.out.println(pMatcher.group(0));
-                                System.out.println(Arrays.toString(MainUI.finished));
                                 for (int i = 0; i < MainUI.percentages.length; i++) {
                                     if (pMatcher.group(0).equals(MainUI.percentages[i] + "%") && !MainUI.finished[i]) {
                                         Runtime.getRuntime().exec(MainUI.listOfCommands[i]);
