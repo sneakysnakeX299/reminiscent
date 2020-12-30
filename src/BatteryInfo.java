@@ -50,7 +50,8 @@ public class BatteryInfo implements Runnable {
                                 for (int i = 0; i < MainUI.percentages.length; i++) {
                                     try {
                                         if (pMatcher.group(0).equals(MainUI.percentages[i] + "%") && !MainUI.finished[i]) {
-                                            Runtime.getRuntime().exec(MainUI.listOfCommands[i]);
+                                            String[] command = {"/bin/sh", "-c", MainUI.listOfCommands[i]};
+                                            Runtime.getRuntime().exec(command);
                                             MainUI.finished[i] = true;
                                         }
                                     } catch (IOException e) {
