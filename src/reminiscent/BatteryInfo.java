@@ -15,6 +15,7 @@ import javafx.scene.paint.Color;
 
 import java.awt.*;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.regex.Matcher;
@@ -47,9 +48,13 @@ public class BatteryInfo implements Runnable {
                                 //and im lazy to fix this at the moment
                                 //will fix when this becomes a huge issue or something
                                 for (int i = 0; i < MainUI.percentages.length; i++) {
-                                    if (pMatcher.group(0).equals(MainUI.percentages[i] + "%") && !MainUI.finished[i]) {
-                                        Runtime.getRuntime().exec(MainUI.listOfCommands[i]);
-                                        MainUI.finished[i] = true;
+                                    try {
+                                        if (pMatcher.group(0).equals(MainUI.percentages[i] + "%") && !MainUI.finished[i]) {
+                                            Runtime.getRuntime().exec(MainUI.listOfCommands[i]);
+                                            MainUI.finished[i] = true;
+                                        }
+                                    } catch (IOException e) {
+                                        System.out.println("Command not found.");
                                     }
                                 }
                             }
