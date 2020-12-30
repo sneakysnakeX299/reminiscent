@@ -11,4 +11,4 @@ This is a bit of a pain on Linux so add it to startup programs the way you want.
 Install sox and use the play command. You'll see some examples down below.
 
 ### Examples
-![Click here](https://sneakysnakex299.github.io/assets/2020-12-30%2011-31-42.mp4)
+https://sneakysnakex299.github.io/assets/2020-12-30%2011-31-42.mp4
