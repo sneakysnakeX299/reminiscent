@@ -12,5 +12,11 @@ This is a bit of a pain on Linux so add it to startup programs the way you want.
 ### Sounds
 Install sox and use the play command. You'll see some examples down below.
 
+### Troubleshooting
+- System tray issue on GNOME DE(e.g. Ubuntu): https://extensions.gnome.org/extension/1031/topicons/
+- IO error when running as root: Create .config/reminiscent/reminiscent.conf and make it readable and writable.
+- Tray icon not transparent: This is a Java AWT issue. I'm testing a workaround at the moment and this should fix the system tray issue on GNOME as well.
+- Graphics device initalization error: Genuinely have no idea what causes this. I tested this on two machines(both running Arch + i3-gaps) and I can run the application. I'm looking forward to finding a fix but help would seriously be appreciated.
+
 ### Examples
 https://sneakysnakex299.github.io/assets/2020-12-30%2011-31-42.mp4
