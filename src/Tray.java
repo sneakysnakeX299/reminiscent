@@ -18,7 +18,10 @@ public class Tray implements Runnable {
         ClassLoader cls = this.getClass().getClassLoader();
         URL url = cls.getResource("reminiscent/icon.png");
         TrayIcon icon = new TrayIcon(Toolkit.getDefaultToolkit().createImage(url));
+<<<<<<< HEAD
         icon.setImageAutoSize(true);
+=======
+>>>>>>> ed518d991b48fb3cfeb9e59e16c8550898f609a4
         SystemTray tray = SystemTray.getSystemTray();
         icon.addMouseListener(new MouseAdapter() {
             @Override

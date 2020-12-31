@@ -37,7 +37,10 @@ public class MainUI extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+<<<<<<< HEAD
         Platform.setImplicitExit(false);
+=======
+>>>>>>> ed518d991b48fb3cfeb9e59e16c8550898f609a4
         MainUI.stage = stage;
         for (int i = 0, x = 0, y = 0; i < ConfigHandler.counter; i++) {
             if (i % 2 == 0) {
@@ -296,6 +299,11 @@ public class MainUI extends Application {
                 System.exit(0);
             }
         });
+<<<<<<< HEAD
+=======
+
+        Platform.setImplicitExit(false);
+>>>>>>> ed518d991b48fb3cfeb9e59e16c8550898f609a4
     }
     public static void main(String args[]) throws InterruptedException, IOException {
         ConfigHandler.ConfigHandle();
