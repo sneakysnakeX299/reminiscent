@@ -34,9 +34,11 @@ public class MainUI extends Application {
     public static int[] percentages = new int[1000];
     public static boolean[] finished = new boolean[1000];
     public static Stage stage;
+    public static boolean hidden;
 
     @Override
     public void start(Stage stage) throws Exception {
+        hidden = false;
         Platform.setImplicitExit(false);
         MainUI.stage = stage;
         for (int i = 0, x = 0, y = 0; i < ConfigHandler.counter; i++) {
@@ -289,6 +291,13 @@ public class MainUI extends Application {
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 
         stage.show();
+
+        stage.setMaxWidth(stage.getWidth());
+        stage.setMaxHeight(stage.getHeight());
+        stage.setMinWidth(stage.getWidth());
+        stage.setMinHeight(stage.getHeight());
+        stage.setWidth(stage.getWidth());
+        stage.setHeight(stage.getHeight());
 
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override

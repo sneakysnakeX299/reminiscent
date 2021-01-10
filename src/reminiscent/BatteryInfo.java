@@ -125,6 +125,13 @@ public class BatteryInfo implements Runnable {
                                     warn.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
                                     warn.setFill(Color.rgb(44,44,44));
                                     noinfo.show();
+                                    //set the proper window size
+                                    noinfo.setMaxWidth(noinfo.getWidth());
+                                    noinfo.setMaxHeight(noinfo.getHeight());
+                                    noinfo.setMinWidth(noinfo.getWidth());
+                                    noinfo.setMinHeight(noinfo.getHeight());
+                                    noinfo.setWidth(noinfo.getWidth());
+                                    noinfo.setHeight(noinfo.getHeight());
                                     acpiInfo = 1;
                                 }
                             });
@@ -192,6 +199,13 @@ public class BatteryInfo implements Runnable {
                             warn.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
                             warn.setFill(Color.rgb(44,44,44));
                             noacpi.show();
+                            //again, set the proper window size
+                            noacpi.setMaxWidth(noacpi.getWidth());
+                            noacpi.setMaxHeight(noacpi.getHeight());
+                            noacpi.setMinWidth(noacpi.getWidth());
+                            noacpi.setMinHeight(noacpi.getHeight());
+                            noacpi.setWidth(noacpi.getWidth());
+                            noacpi.setHeight(noacpi.getHeight());
                             acpiInfo = 1;
                         }
                     });
