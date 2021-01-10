@@ -23,12 +23,24 @@ public class Tray implements Runnable {
         icon.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Platform.runLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        MainUI.stage.show();
-                    }
-                });
+                if (!MainUI.hidden) {
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            MainUI.stage.hide();
+                            MainUI.hidden = true;
+                        }
+                    });
+                }
+                else {
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            MainUI.stage.show();
+                            MainUI.hidden = false;
+                        }
+                    });
+                }
             }
         });
         try {
